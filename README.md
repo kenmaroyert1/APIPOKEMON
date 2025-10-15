@@ -125,3 +125,33 @@ pytest
 ## 📄 Licencia
 
 Este proyecto está bajo la Licencia MIT - mira el archivo `LICENSE` para más detalles.
+
+## 🆕 Actualizaciones Recientes
+
+- **Base de Datos Migrada**: Ahora se utiliza MySQL en lugar de SQLite.
+- **Inserción de Datos**: Se han añadido 30 Pokémon a la base de datos como datos iniciales.
+- **Scripts Útiles**:
+  - `Scripts/insert_pokemon_data.py`: Script para insertar Pokémon en la base de datos.
+  - `Scripts/create_pokemon_table.sql`: Script SQL para crear la tabla de Pokémon.
+  - `Scripts/test_mysql_connection.py`: Verifica la conexión con la base de datos.
+
+## 🛠️ Configuración de Base de Datos
+
+1. Configurar las variables de entorno en un archivo `.env`:
+   ```env
+   DBHOST=tu_host
+   DBUSERNAME=tu_usuario
+   DBPASSWORD=tu_contraseña
+   DBPORT=puerto
+   DBNAME=nombre_base_datos
+   ```
+
+2. Crear la tabla de Pokémon ejecutando el script SQL:
+   ```bash
+   python Scripts/execute_sql.py
+   ```
+
+3. Insertar los datos iniciales:
+   ```bash
+   python Scripts/insert_pokemon_data.py
+   ```
