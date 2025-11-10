@@ -14,6 +14,15 @@ jwt = JWTManager(app)
 # Inicializar la base de datos
 init_db(app)
 
+
+
+
+
+
+
+
+
+
 # Ruta de bienvenida
 @app.route('/')
 def welcome():
@@ -104,4 +113,4 @@ app.register_blueprint(auth_blueprint, url_prefix='/auth')
 app.register_blueprint(pokemon_blueprint, url_prefix='/api')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, use_reloader=False)
